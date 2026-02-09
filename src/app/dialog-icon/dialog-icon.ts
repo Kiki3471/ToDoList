@@ -10,6 +10,7 @@ import { CardMediaSizeExample } from '../card-media-size-example/card-media-size
   imports: [MatButtonModule, MatDialogModule, CardMediaSizeExample],
   templateUrl: './dialog-icon.html',
   styleUrl: 'dialog-icon.css',
+  //файлы должны насываться dialog-icon.component.html и тд идет {{название}}.{{сушность}}.{{расширение}}
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DialogAnimationsExample {
@@ -17,6 +18,7 @@ export class DialogAnimationsExample {
   private boardComponent!: CardMediaSizeExample;
 
   constructor(private dialog: MatDialog) {}
+  //давай в одном стиел инжектировать через функцию inject()
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAnimationsDialogComponent);
