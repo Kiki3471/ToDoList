@@ -31,6 +31,7 @@ export class CardMediaSizeExample {
     { id: this.nextId++, title: 'Конец', label: 'ггг', status: 'done' },
   ];
 
+  //тут должна быть просто task: string
   addTaskToNew(task: { title: string }) {
     this.tasks = [
       ...this.tasks,
@@ -74,6 +75,7 @@ export class CardMediaSizeExample {
   }
 
   tasksByStatus(status: Status): Task[] {
+    // не сокарашай так названия пиши слова полность, можно сокразать, но не до одной буквы (task, res, item, cdr) 
     return this.tasks.filter((t) => t.status === status);
   }
 }
